@@ -26,4 +26,11 @@
     deactivate server
 
     Note right of browser: A function is executed to render the notes
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->>browser: The browser send the note
+    deactivate server
+
+    Note right of browser: Once this process is finished, the note is placed in the JSON and the browser reloads the page by GETting everything again.
 ```
